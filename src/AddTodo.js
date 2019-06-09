@@ -5,12 +5,10 @@ export const AddTodo = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(inputValue);
     props.handleSubmit(inputValue);
   };
 
   const handleInput = event => {
-    console.log(inputValue);
     setInputValue(event.target.value);
   };
 

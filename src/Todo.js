@@ -7,5 +7,16 @@ import React from "react";
 // }
 
 export const Todo = props => {
-  return <div>{props.title}</div>;
+  return (
+    <div>
+      <label>
+        <input
+          onChange={props.handleCheck}
+          type="checkbox"
+          checked={props.checked}
+        />
+        {props.checked ? <s>{props.title}</s> : props.title}
+      </label>
+    </div>
+  );
 };
